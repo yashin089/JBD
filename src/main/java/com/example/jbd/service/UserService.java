@@ -19,10 +19,13 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User create(User user) {
-        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
+    public User create(String name, String email) {
+        if (userRepository.findByEmail(email).isPresent()) {
             throw new IllegalStateException("Email already exists");
         }
+        User user = new User();
+        user.setName(name);
+        user.setEmail(email);
         return userRepository.save(user);
     }
 

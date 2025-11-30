@@ -20,8 +20,10 @@ public class UserController {
     }
 
     @PostMapping
-    public User create(@RequestBody User user) {
-        return userService.create(user);
+    public User create(
+            @RequestParam(required = true) String name,
+            @RequestParam(required = true) String email) {
+        return userService.create(name, email);
     }
 
     @DeleteMapping(path = "{id}")
