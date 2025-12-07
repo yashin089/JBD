@@ -1,2 +1,3 @@
-insert into USERS(NAME, EMAIL) values('Ivan', 'ivan@mail.ru');
-insert into USERS(NAME, EMAIL) values('Mark', 'mark@mail.ru');
+-- delete from USERS;
+-- insert into USERS(NAME, EMAIL, PASSWORD, ROLE) values('Ivan', 'ivan@mail.ru', '123', 'ROLE_ADMIN';);
+-- insert into USERS(NAME, EMAIL, PASSWORD, ROLE) values('Mark', 'mark@mail.ru', '123', 'ROLE_USER');
